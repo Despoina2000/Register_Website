@@ -2,6 +2,8 @@
 A secure website where a user can create an account and log in. We built it on a virtual computer running the **CentOS 7** operating system. The database used to hold user data has **MariaDB** as database management system, and the site was built using **HTML and CSS** tools.
 ## Implemetations
 I downloaded the MariaDB database management system with the ``yum install mariadb-server -y`` command, where I later started it with ``sudo systemctl start mariadb``. Below I show what its status is with the ``sudo systemctl status mariadb`` command.
+![image](https://github.com/Despoina2000/Register_Website/assets/66719546/1decb473-b0ed-424c-a457-bcb296f322c9)
+
 ![image](https://github.com/Despoina2000/Register_Website/assets/66719546/d187456b-2a30-41d7-bba1-79cb5407fef7)
 <br>Then, to create my own server I executed the commands: ``sudo mysql`` and ``CREATE USER 'myserver'@'localhost' IDENTIFIED BY '3180146';``. To have all permissions, I executed the command ``GRANT ALL PRIVILEGES ON *.* TO 'myserver'@'localhost' WITH GRANT OPTION;``. To build the GDPR database I used the command ``CREATE DATABASE GDPR;``. The table ``users`` is for storing the password and the table ``logging`` is for storing informations about the numbers of tryings to log in the page with the wrong password and when was the last date when the password was updated. You can find the rest **SQL** code [here](https://github.com/Despoina2000/Register_Website/blob/main/database/SQL_COMMANDS.mysql).
 
